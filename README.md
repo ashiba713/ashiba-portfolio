@@ -115,5 +115,10 @@ Open: **http://localhost:3000**
 5. Deploy!
 
 ---
+## Screenshots
+
+![ashiba-portfolio](img1.png)
+![ashiba-portfolio](img2.png)
+![ashiba-portfolio](img3.png)
 
 Built with care by **Ashiba Alben A** · Kanyakumari, Tamil Nadu
