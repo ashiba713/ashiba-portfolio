@@ -1,18 +1,22 @@
-// server.js — Main Express Application Entry Point
-// Portfolio: Ashiba Alben A — AI & Data Science Engineer
-
 //require('dotenv').config();
-
-const express     = require('express');
-const path        = require('path');
-const helmet      = require('helmet');
-const cors        = require('cors');
-const rateLimit   = require('express-rate-limit');
-const connectDB   = require('./config/db');
+const express   = require('express');
+const path      = require('path');
+const helmet    = require('helmet');
+const cors      = require('cors');
+const rateLimit = require('express-rate-limit');
+// const connectDB = require('./config/db');
 
 // --- Route Imports ---
 const portfolioRoutes = require('./routes/portfolioRoutes');
 const contactRoutes   = require('./routes/contactRoutes');
+
+const app  = express();
+const PORT = process.env.PORT || 3000;
+
+// ==============================
+//  CONNECT DATABASE
+// ==============================
+// connectDB();
 
 const app  = express();
 const PORT = process.env.PORT || 3000;
