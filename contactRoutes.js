@@ -1,13 +1,11 @@
-// routes/contactRoutes.js
-
 const express = require('express');
-const router  = express.Router();
-const { submitContact, getMessages } = require('../controllers/contactController');
+const router = express.Router();
 
-// POST /api/contact  — submit contact form
-router.post('/', submitContact);
-
-// GET  /api/messages — view all messages (admin)
-router.get('/messages', getMessages);
+router.post('/', (req, res) => {
+  res.json({
+    success: true,
+    message: 'Message received',
+  });
+});
 
 module.exports = router;
