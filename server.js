@@ -32,7 +32,10 @@ app.use(express.urlencoded({ extended: true }));
 
 // ==============================
 // STATIC FILES
-// Your index.html is in the ROOT folder
+// This serves:
+//   /css/style.css
+//   /js/main.js
+//   /img1.png, img2.png, etc.
 // ==============================
 app.use(express.static(__dirname));
 
@@ -73,8 +76,9 @@ app.get('/api/health', (req, res) => {
 
 // ==============================
 // FRONTEND
+// Your index.html is in the ROOT folder
 // ==============================
-app.get('*', (req, res) => {
+app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, 'index.html'));
 });
 
