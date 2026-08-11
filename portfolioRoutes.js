@@ -1,24 +1,20 @@
-// routes/portfolioRoutes.js — RESTful API for portfolio data
-
 const express = require('express');
-const router  = express.Router();
-const {
-  getProjects,
-  getProjectById,
-  getProfile,
-  getSkills
-} = require('../controllers/portfolioController');
+const router = express.Router();
 
-// GET /api/projects       — all projects
-router.get('/projects', getProjects);
+// Temporary simple response
+router.get('/projects', (req, res) => {
+  res.json([]);
+});
 
-// GET /api/projects/:id   — single project
-router.get('/projects/:id', getProjectById);
+router.get('/profile', (req, res) => {
+  res.json({
+    name: 'Ashiba Alben A',
+    role: 'AI & Data Science Engineer',
+  });
+});
 
-// GET /api/profile        — full profile data
-router.get('/profile', getProfile);
-
-// GET /api/skills         — skills only
-router.get('/skills', getSkills);
+router.get('/skills', (req, res) => {
+  res.json([]);
+});
 
 module.exports = router;
