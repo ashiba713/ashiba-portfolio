@@ -1,4 +1,4 @@
-```js
+
 // server.js — Render-ready version
 
 const express = require('express');
@@ -113,4 +113,3 @@ app.listen(PORT, () => {
   console.log(`  ENV: ${process.env.NODE_ENV || 'development'}`);
   console.log('================================');
 });
-```
